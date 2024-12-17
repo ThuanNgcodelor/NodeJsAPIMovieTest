@@ -1,13 +1,12 @@
-const mongoose = require('mongoose') ;
+const mongoose = require('mongoose');
 
 const connectDB = async () => {
     try {
-        await mongoose.connect('mongodb://localhost:27017/Nodejs');
+        await mongoose.connect('mongodb+srv://davidnguyen:thuan417@davidnguyen.7rlnm.mongodb.net/?retryWrites=true&w=majority&appName=Davidnguyen');
         console.log('Ok');
-
-    }catch (err) {
-        console.log('Not found', err );
-        process.emit(1);
+    } catch (err) {
+        console.log('Not found', err);
+        process.exit(1);
     }
 };
 
